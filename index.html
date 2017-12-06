@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RPS Multiplayer</title>
+	 <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- style.css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+</head>
+	
+		<div class="container">
+			<h1>Rock Paper Scissors</h1>
+				 <form> <span id="playerName">Name: <input id="player-name" type="text" >
+				 		<input id="add-player-name"  type="submit"></span>
+				</form>
+					<div class="row">
+						<div class="col-md-3 gamePlay"> 
+							<div id="playerOne"></div>
+							<div id="P1-buttonHolder"></div>
+							<div id="P1-RPS-Choice"></div>
+							<div id="pOneWins"></div>
+							<div id="pOneLosses"></div>
+						</div>						
+						<div class="col-md-3 gamePlay" id="resultsBox"></div>
+						<div class="col-md-3 gamePlay"> 
+							<div id="playerTwo"></div>
+							<div id="P2-buttonHolder"></div>
+							<div id="P2-RPS-Choice"></div>
+							<div id="pTwoWins"></div>
+							<div id="pTwoLosses"></div>
+						</div>
+					</div>
+		</div>
+
+<script src="assets/javascript/app.js"></script>
+</body>
+</html>
