@@ -18,7 +18,7 @@ var playerOneLocalWins;
 var playerOneLocalLosses;
 
 var playerTwoLocal;
-var playerTwoLocalScore;
+var playerTwoLocalWins;
 var playerTwoLocalLosses;
 
 var RPS = ["Rock", "Paper", "Scissors"]
@@ -143,7 +143,7 @@ database.ref("players").on("value", function(snapshot) {
 		if (snapshot.child("playerTwoData").exists()) {
 
 			playerTwoLocal = snapshot.val().playerTwoData;
-			$("playerTwo").text(playerTwoLocal);
+			$("#playerTwo").text(playerTwoLocal);
 
 
 				if (snapshot.child("playerTwoDataWins").exists()) {
@@ -210,7 +210,7 @@ if(newName !== null && newName !== "") {
 		   			playerTwoLocalWins = initialValue;
 		   			playerTwoLocalLosses = initialValue;
 
-		   			database.ref("players").set({
+		   			database.ref("players").update({
 		   				playerTwoData: playerTwoLocal,
 		   				playerTwoDataWins: playerTwoLocalWins,
 		   				playerTwoDataLosses: playerTwoLocalLosses
@@ -228,7 +228,7 @@ if(newName !== null && newName !== "") {
 		   			playerOneLocalWins = initialValue;
 		   			playerOneLocalLosses = initialValue;
 
-		   			database.ref("players").set({
+		   			database.ref("players").update({
 		   				playerOneData: playerOneLocal,
 		   				playerOneDataWins: playerOneLocalWins,
 		   				playerOneDataLosses: playerOneLocalLosses
